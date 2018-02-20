@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.view;
+package com.glureau.wolfram30.chat.view;
 
 /*
  * TouchImageView.java

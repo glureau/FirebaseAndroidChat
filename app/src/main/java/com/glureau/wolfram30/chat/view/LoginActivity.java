@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.view;
+package com.glureau.wolfram30.chat.view;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -21,9 +21,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-import alessandro.firebaseandroid.MainActivity;
-import alessandro.firebaseandroid.R;
-import alessandro.firebaseandroid.util.Util;
+import com.glureau.wolfram30.chat.MainActivity;
+import com.glureau.wolfram30.chat.R;
+import com.glureau.wolfram30.chat.util.Util;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 

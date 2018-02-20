@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.model;
+package com.glureau.wolfram30.chat.model;
 
 /**
  * Created by Alessandro Barreto on 24/06/2016.

@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.adapter;
+package com.glureau.wolfram30.chat.adapter;
 
 import android.view.View;
 

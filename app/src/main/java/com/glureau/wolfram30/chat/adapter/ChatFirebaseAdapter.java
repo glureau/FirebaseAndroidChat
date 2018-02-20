@@ -1,8 +1,7 @@
-package alessandro.firebaseandroid.adapter;
+package com.glureau.wolfram30.chat.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.text.format.DateUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,13 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.util.Util;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.Query;
 
-import alessandro.firebaseandroid.R;
-import alessandro.firebaseandroid.model.ChatModel;
+import com.glureau.wolfram30.chat.R;
+import com.glureau.wolfram30.chat.model.ChatModel;
 import hani.momanii.supernova_emoji_library.Helper.EmojiconTextView;
 
 /**
@@ -91,7 +88,7 @@ public class ChatFirebaseAdapter extends FirebaseRecyclerAdapter<ChatModel,ChatF
             viewHolder.tvIsLocation(View.GONE);
             viewHolder.setIvChatPhoto(model.getFile().getUrl_file());
         }else if(model.getMapModel() != null){
-            viewHolder.setIvChatPhoto(alessandro.firebaseandroid.util.Util.local(model.getMapModel().getLatitude(),model.getMapModel().getLongitude()));
+            viewHolder.setIvChatPhoto(com.glureau.wolfram30.chat.util.Util.local(model.getMapModel().getLatitude(),model.getMapModel().getLongitude()));
             viewHolder.tvIsLocation(View.VISIBLE);
         }
     }

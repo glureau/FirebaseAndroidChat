@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid;
+package com.glureau.wolfram30.chat;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -41,15 +41,15 @@ import java.io.File;
 import java.util.Calendar;
 import java.util.Date;
 
-import alessandro.firebaseandroid.adapter.ChatFirebaseAdapter;
-import alessandro.firebaseandroid.adapter.ClickListenerChatFirebase;
-import alessandro.firebaseandroid.model.ChatModel;
-import alessandro.firebaseandroid.model.FileModel;
-import alessandro.firebaseandroid.model.MapModel;
-import alessandro.firebaseandroid.model.UserModel;
-import alessandro.firebaseandroid.util.Util;
-import alessandro.firebaseandroid.view.FullScreenImageActivity;
-import alessandro.firebaseandroid.view.LoginActivity;
+import com.glureau.wolfram30.chat.adapter.ChatFirebaseAdapter;
+import com.glureau.wolfram30.chat.adapter.ClickListenerChatFirebase;
+import com.glureau.wolfram30.chat.model.ChatModel;
+import com.glureau.wolfram30.chat.model.FileModel;
+import com.glureau.wolfram30.chat.model.MapModel;
+import com.glureau.wolfram30.chat.model.UserModel;
+import com.glureau.wolfram30.chat.util.Util;
+import com.glureau.wolfram30.chat.view.FullScreenImageActivity;
+import com.glureau.wolfram30.chat.view.LoginActivity;
 import hani.momanii.supernova_emoji_library.Actions.EmojIconActions;
 import hani.momanii.supernova_emoji_library.Helper.EmojiconEditText;
 

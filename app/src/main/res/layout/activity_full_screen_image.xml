@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#424242"
-    tools:context="alessandro.firebaseandroid.view.FullScreenImageActivity">
+    tools:context="com.glureau.wolfram30.chat.view.FullScreenImageActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -32,7 +32,7 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <alessandro.firebaseandroid.view.TouchImageView
+    <com.glureau.wolfram30.chat.view.TouchImageView
         android:layout_below="@+id/toolbar"
         android:id="@+id/imageView"
         android:layout_width="match_parent"

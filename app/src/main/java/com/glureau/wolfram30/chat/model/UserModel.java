@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.model;
+package com.glureau.wolfram30.chat.model;
 
 import com.google.firebase.database.Exclude;
 

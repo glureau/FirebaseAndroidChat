@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
-        applicationId "alessandro.firebaseandroid"
+        applicationId "com.glureau.wolfram30.chat"
         minSdkVersion 17
-        targetSdkVersion 24
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -20,34 +20,36 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
 
     //SUPPORT ANDROID
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.android.support:recyclerview-v7:24.0.0'
-    compile 'com.android.support:design:24.0.0'
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:recyclerview-v7:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
 
     //IMAGE LOAD
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
 
     //CHAT UI
-    compile 'hani.momanii.supernova_emoji_library:supernova-emoji-library:0.0.2'
-    compile 'me.himanshusoni.chatmessageview:chat-message-view:1.0.3'
+    implementation 'hani.momanii.supernova_emoji_library:supernova-emoji-library:0.0.2'
+    implementation 'me.himanshusoni.chatmessageview:chat-message-view:1.0.3'
 
     // AUTH
-    compile 'com.google.android.gms:play-services-auth:9.2.0'
-    compile 'com.google.firebase:firebase-auth:9.2.0'
+    implementation 'com.google.android.gms:play-services-auth:11.8.0'
+    implementation 'com.google.firebase:firebase-auth:11.8.0'
 
     //DATABASE FIREBASE,UI
-    compile 'com.google.firebase:firebase-database:9.2.0'
-    compile 'com.firebaseui:firebase-ui-database:0.4.1'
+    implementation 'com.google.firebase:firebase-database:11.8.0'
+    implementation 'com.firebaseui:firebase-ui-database:0.4.1'
 
     //STORAGE FIREBASE
-    compile 'com.google.firebase:firebase-storage:9.2.0'
+    implementation 'com.google.firebase:firebase-storage:11.8.0'
 
     //Places SERVICES
-    compile 'com.google.android.gms:play-services-places:9.2.0'
+    implementation 'com.google.android.gms:play-services-places:11.8.0'
 
 }
+
+// Should appear at the end of the gradle file.
 apply plugin: 'com.google.gms.google-services'
