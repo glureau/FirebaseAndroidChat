@@ -88,7 +88,7 @@ public class ChatFirebaseAdapter extends FirebaseRecyclerAdapter<ChatModel,ChatF
             viewHolder.tvIsLocation(View.GONE);
             viewHolder.setIvChatPhoto(model.getFile().getUrl_file());
         }else if(model.getMapModel() != null){
-            viewHolder.setIvChatPhoto(com.glureau.wolfram30.chat.util.Util.local(model.getMapModel().getLatitude(),model.getMapModel().getLongitude()));
+            viewHolder.setIvChatPhoto(com.glureau.wolfram30.chat.util.Util.INSTANCE.local(model.getMapModel().getLatitude(),model.getMapModel().getLongitude()));
             viewHolder.tvIsLocation(View.VISIBLE);
         }
     }

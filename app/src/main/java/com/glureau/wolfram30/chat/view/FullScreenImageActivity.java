@@ -58,13 +58,13 @@ public class FullScreenImageActivity extends AppCompatActivity {
 
     private void bindViews(){
         progressDialog = new ProgressDialog(this);
-        mImageView = (TouchImageView) findViewById(R.id.imageView);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mImageView = findViewById(R.id.imageView);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ivUser = (ImageView)toolbar.findViewById(R.id.avatar);
-        tvUser = (TextView)toolbar.findViewById(R.id.title);
+        ivUser = toolbar.findViewById(R.id.avatar);
+        tvUser = toolbar.findViewById(R.id.title);
     }
 
     private void setValues(){

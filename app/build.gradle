@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.protobuf'
+
 
 android {
     compileSdkVersion 27
@@ -17,10 +20,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        debug.java.srcDirs += "${protobuf.generatedFilesBaseDir}/debug/javalite"
+        release.java.srcDirs += "${protobuf.generatedFilesBaseDir}/release/javalite"
+    }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
     testImplementation 'junit:junit:4.12'
 
     //SUPPORT ANDROID
@@ -49,6 +58,30 @@ dependencies {
     //Places SERVICES
     implementation 'com.google.android.gms:play-services-places:11.8.0'
 
+    // PROTOBUF
+    compile 'com.google.protobuf:protobuf-lite:3.0.0'
+}
+
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.0.0'
+    }
+    plugins {
+        javalite {
+            artifact = 'com.google.protobuf:protoc-gen-javalite:3.0.0'
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                remove java
+            }
+            task.plugins {
+                javalite { }
+            }
+        }
+    }
 }
 
 // Should appear at the end of the gradle file.
